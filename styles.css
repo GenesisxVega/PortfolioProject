@@ -1,0 +1,358 @@
+body {
+    font-family: "marigny", Arial, sans-serif; /* Use "marigny" font as primary font with Arial as backup */
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f6ef;
+}
+
+header {
+    font-family: "marigny", sans-serif; /* Use "marigny" font as primary font */
+    font-weight: 500;
+    font-style: normal; 
+    background-color: #f8f6ef; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1.5px solid #0c2cde;
+    border-radius: 5px;
+    background-color: #f8f6ef;
+}
+
+nav a:hover {
+    background-color: #edf99f70;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        margin: 5px;
+    }
+}
+
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-family: "marigny", sans-serif;
+    font-size: 50px;
+}
+
+h1 {
+    color: black;
+    font-family: "marigny", sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    margin: 10px;
+    padding: 10px;
+    width: 30%; 
+    border: 2px solid #B2C535;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: transparent; 
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+#animatedMesh {
+    position: absolute;
+    top: -10%; 
+    left: -10%;
+    width: 100%; 
+    height: 100%; 
+    animation: animateMesh 40s ease-in-out infinite;
+}
+
+@keyframes animateMesh {
+    0% {
+        transform: translate(-100%, -80%);
+    }
+    50% {
+        transform: translate(30%, 0%);
+    }
+    100% {
+        transform: translate(100%, -80%);
+    }
+}
+
+nav {
+    position: relative;
+    z-index: 1; 
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black; 
+    border-bottom: 2px solid black; 
+}
+#about {
+    background-color: #e7d354fe; 
+    border-bottom: 1px solid black; 
+}
+.hero-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    text-align: center; 
+    background-color: #e7d354fe;
+    font-size: large;
+}
+
+.about-image {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 3px solid #E4943E;
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #f8f6ef;
+    padding: 30px;
+    text-align: center;
+}
+
+.card object {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+}
+
+.caption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: smaller;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .about-text {
+        padding: 0px 50px;
+    }
+    .about-image {
+        width: 70%;
+    }
+}
+
+footer {
+    background-color: #f8f6ef;
+    color: #090909;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    border-top: 1.5px solid #DCA3B7;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+#contact {
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
+
+#contact .social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+#contact .social-icon:hover {
+    transform: scale(1.1);
+}
+
+.decorations {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.decorations svg {
+    margin: 0 5px;
+    fill: #F05699;
+}
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact {
+        width: 90%; 
+    }
+
+    #contact ul {
+        margin-top: 20px; 
+    }
+
+    .decorations {
+        padding-bottom: 20px; 
+    }
+
+    .decorations svg {
+        margin: 5px; 
+    }
+}
+.container-2023 {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+.container-2024 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    margin-bottom: 20px; 
+}
+
+.graphiccard {
+    flex: 0 0 auto; 
+    width: 300px; 
+    margin-right: 20px; 
+    border: 3px solid #ef2084;
+    border-radius: 30px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #fae8ee; 
+    padding: 30px;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.graphiccard img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 3px;
+}
+
+.graphiccard .caption {
+    margin-top: 30px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* Style for the accordion */
+.accordion {
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  .accordion-tab {
+    background-color: #eaeaed;
+    border-radius: 0px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 2px solid #5C90D5; 
+
+  }
+  .accordion-tab-title {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-tab-title:hover {
+    background-color: #e0e0e0;
+  }
+
+  .accordion-tab-content {
+    padding: 10px;
+    display: none;
+    text-align: center; 
+  }
+
+  .accordion-tab-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
